@@ -1,0 +1,1 @@
+fun binarySearch(array: IntArray, target: Int){}

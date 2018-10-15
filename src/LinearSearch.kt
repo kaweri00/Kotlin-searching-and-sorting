@@ -1,5 +1,5 @@
 
-private fun linearSearch(array: IntArray, target: Int): Int?{
+fun linearSearch(array: IntArray, target: Int): Int?{
     var foundAt: Int? = null
     if (array.isNotEmpty()){
         var index: Int = 0
