@@ -1,10 +1,9 @@
 
-private fun linearSearch(array: IntArray, target: Int): Int{
-    val NOT_FOUND = -1
-    var foundAt: Int = NOT_FOUND
+private fun linearSearch(array: IntArray, target: Int): Int?{
+    var foundAt: Int? = null
     if (array.isNotEmpty()){
         var index: Int = 0
-        while (foundAt == NOT_FOUND &&
+        while (foundAt == null &&
                 index <= array.lastIndex){
             if (array[index] == target){ foundAt = index}
             else { index++ }
@@ -15,10 +14,10 @@ private fun linearSearch(array: IntArray, target: Int): Int{
 
 fun main(args: Array<String>) {
 
-    val TARGET_VALUE = 15
+    val targetValue = 0
     val myArray = intArrayOf(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
-    val isFoundAt = linearSearch(myArray, TARGET_VALUE)
+    val isFoundAt = linearSearch(myArray, targetValue)
 
-    if (isFoundAt >= 0){ println(" $TARGET_VALUE is found at $isFoundAt index.")}
+    if (isFoundAt != null){ println(" $targetValue is found at $isFoundAt index.")}
     else{ println("Target not found!")}
 }
