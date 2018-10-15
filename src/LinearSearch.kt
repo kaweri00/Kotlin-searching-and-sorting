@@ -6,9 +6,7 @@ private fun linearSearch(array: IntArray, target: Int): Int{
         var index: Int = 0
         while (foundAt == NOT_FOUND &&
                 index <= array.lastIndex){
-            println("Ciclo ${index + 1}")
             if (array[index] == target){ foundAt = index}
-            else if (array[index] > target){ break }
             else { index++ }
         }
     }
