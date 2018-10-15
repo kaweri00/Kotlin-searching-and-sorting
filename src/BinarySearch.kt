@@ -1,18 +1,18 @@
 fun binarySearch(array: IntArray, target: Int): Int?{
+
     var foundAt: Int? = null
     var highIndex = array.lastIndex
     val isUnderRange = target <= array[highIndex]
+
     if (array.isNotEmpty() && isUnderRange){
         var lowIndex: Int = 0
         var medIndex: Int
         var actualValue: Int
 
-        var cicle = 0
-
         while (foundAt == null && lowIndex <= highIndex){
-            println("Cicle ${++cicle}")
             medIndex = (highIndex + lowIndex) / 2
             actualValue = array[medIndex]
+
             when {
                 actualValue == target -> foundAt = medIndex
                 actualValue > target -> highIndex = medIndex - 1
